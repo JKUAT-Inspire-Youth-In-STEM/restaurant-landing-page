@@ -1,49 +1,90 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
     margin-top: 1rem;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
-header{
+
+/* Header */
+header {
     background-color: #d32f2f;
     color: #fff;
     text-align: center;
     padding: 1.5rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-}
-.hero{
-    text-align: center;
-    padding: 2rem;
-    background-color: white;
-    margin: 1rem auto;
-    max-width: 1200px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-.hero iframe{
-    margin-top: 1rem;
-    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.menu{
-    padding: 2rem;
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    margin: 1.5rem auto;
+    max-width: 1200px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.2);
+    border-radius: 12px;
+    z-index: 0;
+}
+
+.hero span {
+    position: relative;
+    z-index: 1;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hero iframe {
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px;
+    height: 350px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Menu Section */
+.menu {
+    padding: 3rem;
     background-color: #f9e8e8;
     text-align: center;
 }
-.menu h2{
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+
+.menu h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
     color: #d32f2f;
+    text-transform: uppercase;
 }
-.menu-items{
+
+.menu-items {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -51,43 +92,86 @@ header{
     max-width: 1200px;
     margin: 0 auto;
 }
-.menu-item{
+
+.menu-item {
     background-color: white;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 320px;
+    transition: transform 0.3s ease-in-out;
 }
-.menu-item img{
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.menu-item img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    border-bottom: 1px solid #f4f4f4;
-    object-fit: cover;
+    border-bottom: 3px solid #f4f4f4;
 }
-.menu-item p{
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    color: #555;
+
+.menu-item p {
+    padding: 1rem;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 600;
 }
-.reservation{
-    padding: 2rem;
+
+/* Reservation Section */
+.reservation {
+    padding: 3rem;
     text-align: center;
     background-color: #fff;
-    margin: 1rem auto;
+    margin: 1.5rem auto;
     max-width: 600px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
 }
-.reservation h2{
-    font-size: 2rem;
+
+.reservation h2 {
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: #d32f2f;
+    text-transform: uppercase;
 }
-.reservation form{
+
+.reservation form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
     max-width: 400px;
     margin: 0 auto;
+}
+
+.reservation input {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s ease-in-out;
+}
+
+.reservation input:focus {
+    border-color: #d32f2f;
+    outline: none;
+    box-shadow: 0 0 8px rgba(211, 47, 47, 0.3);
+}
+
+.reservation button {
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.reservation button:hover {
+    background-color: #b71c1c;
 }
